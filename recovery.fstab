@@ -7,7 +7,7 @@
 /oem                      ext4     oem                                                      flags=backup=1;display=oem;logical;flashimg=1
 /metadata                 ext4     /dev/block/platform/bootdevice/by-name/md_udc            flags=backup=1;display=metadata;flashimg=1
 /data                     f2fs     /dev/block/platform/bootdevice/by-name/userdata          flags=backup=1;display=data
-/data                     f2fs     /dev/block/platform/bootdevice/by-name/userdata          flags=fileencryption=aes-256-cts
+/data                     f2fs     /dev/block/platform/bootdevice/by-name/userdata          flags=fileencryption=aes-256-xts
 /cache                    ext4     /dev/block/platform/bootdevice/by-name/cache             flags=backup=1;display=cache;flashimg=1
 /mnt/vendor/protect_f     ext4     /dev/block/platform/bootdevice/by-name/protect1          flags=backup=1;display=protect_f;flashimg=1
 /mnt/vendor/protect_s     ext4     /dev/block/platform/bootdevice/by-name/protect2          flags=backup=1;display=protect_s;flashimg=1
@@ -17,9 +17,7 @@
 /mnt/oempersist           ext4     /dev/block/platform/bootdevice/by-name/oempersist        flags=backup=1;display=oempersist;flashimg=1
 /mnt/oempersist           ext4     /dev/block/platform/bootdevice/by-name/tctpersist        flags=backup=1;display=oempersist;flashimg=1
 auto                      auto     /devices/platform/externdevice*                          flags=display=auto
-/external_sd              auto     /devices/platform/externdevice*                          flags=display="MicroSD Card"
 auto                      vfat     /devices/platform/mt_usb*                                flags=display=auto
-/usbotg                   vfat     /devices/platform/mt_usb*                                flags=display="USB-OTG"
 /persistent               emmc     /dev/block/platform/bootdevice/by-name/frp               flags=backup=1;display=persistent;flashimg=1
 /nvram                    emmc     /dev/block/platform/bootdevice/by-name/nvram             flags=backup=1;display=nvram;flashimg=1
 /proinfo                  emmc     /dev/block/platform/bootdevice/by-name/proinfo           flags=backup=1;display=proinfo;flashimg=1
@@ -50,3 +48,5 @@ auto                      vfat     /devices/platform/mt_usb*                    
 /odmdtbo                  emmc     /dev/block/platform/bootdevice/by-name/odmdtbo           flags=backup=1;display=odmdtbo;flashimg=1
 /dtbo                     emmc     /dev/block/platform/bootdevice/by-name/dtbo              flags=backup=1;display=dtbo;flashimg=1
 /vbmeta                   emmc     /dev/block/platform/bootdevice/by-name/vbmeta            flags=backup=1;display=vbmeta;flashimg=1
+external_sd               vfat     /dev/block/mmcblk1p1  /dev/block/mmcblk1                 flags=display="MicroSD";storage;wipeingui;removable;fsflags="utf8"
+/usb-otg                  vfat     /dev/block/sda1  /dev/block/sda                          flags=display="USB-OTG";storage;wipeingui;removable;fsflags="utf8"
