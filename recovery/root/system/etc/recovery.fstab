@@ -17,9 +17,7 @@
 /mnt/oempersist           ext4     /dev/block/platform/bootdevice/by-name/oempersist        flags=backup=1;display=oempersist;flashimg=1
 /mnt/oempersist           ext4     /dev/block/platform/bootdevice/by-name/tctpersist        flags=backup=1;display=oempersist;flashimg=1
 auto                      auto     /devices/platform/externdevice*                          flags=display=auto
-/external_sd              auto     /devices/platform/externdevice*                          flags=display="MicroSD Card"
 auto                      vfat     /devices/platform/mt_usb*                                flags=display=auto
-/usbotg                   vfat     /devices/platform/mt_usb*                                flags=display="USB-OTG"
 /persistent               emmc     /dev/block/platform/bootdevice/by-name/frp               flags=backup=1;display=persistent;flashimg=1
 /nvram                    emmc     /dev/block/platform/bootdevice/by-name/nvram             flags=backup=1;display=nvram;flashimg=1
 /proinfo                  emmc     /dev/block/platform/bootdevice/by-name/proinfo           flags=backup=1;display=proinfo;flashimg=1
