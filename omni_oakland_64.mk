@@ -16,7 +16,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/tcl/oakland_64/device.mk)
 
 PRODUCT_DEVICE := oakland_64
-PRODUCT_NAME := twrp_oakland_64
+PRODUCT_NAME := omni_oakland_64
 PRODUCT_BRAND := alps
 PRODUCT_MODEL := oakland_64
 PRODUCT_MANUFACTURER := tcl
